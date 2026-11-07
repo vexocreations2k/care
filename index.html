@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hair Image Check</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Hair image check</h1>
+  <p class="muted">Upload or take a close photo of your hair. The app predicts its condition from the image alone. Your photo stays on your device.</p>
+
+  <label class="pick" for="file">
+    <input id="file" type="file" accept="image/*" capture="environment">
+    <span>Choose or take a photo</span>
+  </label>
+
+  <div id="preview" hidden><img id="img" alt="Your hair photo"></div>
+
+  <section id="result" hidden>
+    <h2 id="label"></h2>
+    <p id="explain"></p>
+    <div id="metrics"></div>
+    <h3>Suggested care</h3>
+    <ul id="tips"></ul>
+  </section>
+
+  <p class="muted small">Tips: natural light, hair filling the frame, no filters. This is an estimate from color and texture, not a medical diagnosis.</p>
+</main>
+<canvas id="c" hidden></canvas>
+<script src="app.js"></script>
+</body>
+</html>
